@@ -167,7 +167,7 @@ async function fetchPlaces() {
     dom.emptyState.classList.add('hidden');
 
     try {
-        const response = await fetch('data/places.json');
+        const response = await fetch('places.json');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         state.places = await response.json();
         dom.loadingIndicator.classList.add('hidden');
